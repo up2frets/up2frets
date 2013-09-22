@@ -1,0 +1,12 @@
+<%- layout('boilerplate') -%>
+
+<section class = "mp_container cf" >
+    <h1>{{ 'TITLE' | translate }}</h1>
+    <p>{{ 'FOO' | translate }}</p>
+
+<div ng-controller = "Ctrl">
+    <li ng-repeat = "item in items">{{item.title}}</li>
+    <button ng-click="changeLanguage('en')">English</button>
+    <button ng-click="changeLanguage('de')">German</button>
+</div>
+</section>

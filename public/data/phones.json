@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 0,
+        "title" : "About",
+        "icon-class" : "icon-lightbulb",
+        "linkUrl" : "/#/about"
+    }
+    {
+        "id" : 1,
+        "title" : "Portfolio",
+        "icon-class" : "icon-briefcase",
+        "linkUrl" : "/#/portfolio"
+    }
+    {
+        "id" : 2,
+        "title" : "Technologies",
+        "icon-class" : "icon-code",
+        "linkUrl" : "/#/technologies"
+    }
+    {
+        "id" : 3,
+        "title" : "Contacts",
+        "icon-class" : "icon-bookmark-empty",
+        "linkUrl" : "/#/contacts"
+    }
+]

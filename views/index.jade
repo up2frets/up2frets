@@ -1,0 +1,5 @@
+extends layout
+
+block content
+  div(ng-controller = "PhoneListCtrl")
+    p(ng-repeat = "item in items") {{item.id}} {{item.title}}
