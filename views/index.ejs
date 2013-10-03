@@ -8,8 +8,44 @@
                             <li ng-repeat = "item in items">
                                 <a href="{{item.linkUrl}}">
                                     <i class = "{{item.iconClass}}"></i>
+                                    <span class = "title">{{item.title}}</span>
                                 </a>
-                                <p>{{item.title}}</p>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class = "mp_right">
+                <div class = "mp_vertical_holder">
+                <ul class = "mp_chLang">
+                    <li>
+                        <a href="">Рус</a>
+                    </li>
+                    <li>
+                        <a href="">Укр</a>
+                    </li>
+                    <li class = "mpcl_act">
+                        <a href="">Eng</a>
+                    </li>
+                </ul>
+                    <h1 class = "mp_logo">
+                        <span class = "mp_logo_star"></span>
+                        Up<span class = "mpm mp_2">2</span>frets
+                    </h1>
+                    <p>Musician, <span class = "mpm">web-developer</span> and a little designer :)</p>
+                </div>
+            </div>
+        </section>
+        <section class = "mp_container mp2 cf">
+            <div class = "mp_left">
+                <div class = "mp_vertical_holder">
+                    <nav class = "mp_menu" ng-controller = "PhoneListCtrl">
+                        <ul>
+                            <li ng-repeat = "item in items">
+                                <a href="{{item.linkUrl}}">
+                                    <i class = "{{item.iconClass}}"></i>
+                                    <span class = "title">{{item.title}}</span>
+                                </a>
                             </li>
                         </ul>
                     </nav>

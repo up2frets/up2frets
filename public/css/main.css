@@ -4,13 +4,23 @@ html, body {
 }
 body {
     font: 24px/26px 'Open Sans', 'OpenSans', 'Helvetica', 'Arial', sans-serif;
-    background: url('/img/bg.png') repeat;
+    /*background-image: url('/img/bg.png');
+    background-repeat: repeat;
+    background-position: 0px 0px;
     background-attachment: fixed;
+    -webkit-animation: 'bg' 22s linear infinite;
+    -moz-animation: 'bg' 22s linear infinite;*/
     color: #e6e6e6;
 }
 .mp_container {
     width: 100%;
     height: 100%;
+    background-image: url('/img/bg.png');
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    background-attachment: fixed;
+    -webkit-animation: 'bg' 22s linear infinite;
+    -moz-animation: 'bg' 22s linear infinite;
 }
 .mp_left, .mp_right {
     width: 50%;
@@ -53,7 +63,7 @@ body {
     display: block;
     width: 117px;
     height: 110px;
-    background: url(/img/star.png);
+    background: url('/img/star.png');
     left: 22px;
     top: 23px;
     /* -webkit-animation: 'logo_rotate' 2s linear infinite; */
@@ -112,21 +122,21 @@ body {
     color: #e6e6e6;
     border-color: #E6E6E6;
     background: #131313;
-    -webkit-transform: rotateY(180deg);
+    /*-webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+    transform: rotateY(180deg);*/
 }
 
 .mp_menu ul li:hover a i {
-    -webkit-transform: rotateY(180deg);
+    /*-webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+    transform: rotateY(180deg);*/
     display: block;
 }
 
-.mp_menu ul li p {
+.mp_menu ul li .title {
     position: absolute;
     opacity: 0;
     -webkit-transition: 0.4s ease;
@@ -139,8 +149,9 @@ body {
     bottom: -25px;
     margin: 0;
     margin-left: -51px;
+    color: #E6E6E6;
 }
-.mp_menu ul li:hover p {
+.mp_menu ul li:hover .title {
     opacity: 1;
     left: 0px;
     -webkit-transform: scale(0.54);
@@ -186,5 +197,31 @@ body {
     }
     to {
         -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes logo_rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes bg {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: 500px 500px;
+    }
+}
+@-moz-keyframes bg {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: 500px 500px;
     }
 }

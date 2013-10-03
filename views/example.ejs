@@ -1,8 +1,8 @@
 <%- layout('boilerplate') -%>
 
 <section class = "mp_container cf" >
-    <h1>{{ 'TITLE' | translate }}</h1>
-    <p>{{ 'FOO' | translate }}</p>
+    <h1 ng-bind-template = "{{ 'TITLE' | translate }}">Hello</h1>
+    <p ng-bind-template = "{{ 'FOO' | translate }}">This is a paragraph.</p>
 
 <div ng-controller = "Ctrl">
     <li ng-repeat = "item in items">{{item.title}}</li>
