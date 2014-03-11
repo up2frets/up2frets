@@ -1,77 +1,297 @@
 <% layout('boilerplate') -%>
 
-<section class = "mp_container cf">
-            <div class = "mp_left">
-                <div class = "mp_vertical_holder">
-                    <nav class = "mp_menu" ng-controller = "PhoneListCtrl">
-                        <ul>
-                            <li ng-repeat = "item in items">
-                                <a href="{{item.linkUrl}}">
-                                    <i class = "{{item.iconClass}}"></i>
-                                    <span class = "title">{{item.title}}</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class = "mp_right">
-                <div class = "mp_vertical_holder">
-                <ul class = "mp_chLang">
-                    <li>
-                        <a href="">Рус</a>
+    <header>
+        <nav class = "header_nav cf">
+            <a href="#home" class="header_nav_logo" data-content = "slide up">Bogdan <em>Malizhev</em></a>
+            <ul>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#how-i-work">How I Work</a>
+                </li>
+                <li>
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#contacts">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class = "mp mp-home" id = "home">  
+        <div class="mp-home-b">
+            <h1 class = "mp-home_title">Bogdan <em>Malizhev</em> <span>web-developer</span></h1>
+            <a href="#about" class="mp-home_scroll"></a>
+        </div>
+    </section>
+    <section class = "mp mp-about" id = "about">
+        <div class="mp-about-b">
+            <article>
+                <p>My name is Bogdan Malizhev. I am web-developer from Kiev.</p>
+                <p>My passion is front-end development oriented on creating <em>fast, maintainable and user-friendly</em> web applications.</p>
+                <p>Just scroll down to discover more</p>
+            </article>
+            <div class="mp-about_info">
+                <ul class = "about_info_list grid3 cf">
+                    <li class = "ail_item item-1">
+                        <a href="#how-i-work">
+                            <span class = "ail_item_out">
+                                <span class = "ail_item-b">
+                                    <span class = "ail_item_count">3</span>
+                                    <span class="ail_item_title">main principles</span>
+                                </span>
+                            </span>
+                            <span class="ail_item_inside">
+                                <span class="ail_scroll">Scroll down</span>
+                            </span>
+                        </a>
                     </li>
-                    <li>
-                        <a href="">Укр</a>
+                    <li class = "ail_item item-2">
+                        <a href="download/cv.pdf">
+                            <span class = "ail_item_out">
+                                <span class = "ail_item-b">
+                                    <span class = "ail_item_count"><span>more than</span>2000</span>
+                                    <span class="ail_item_title">hours worked</span>
+                                </span>
+                            </span>
+                            <span class="ail_item_inside">
+                                <span class="ail_download">Download my CV</span>
+                            </span>
+                        </a>
                     </li>
-                    <li class = "mpcl_act">
-                        <a href="">Eng</a>
+                    <li class = "ail_item item-3">
+                        <a href="#portfolio">
+                            <span class = "ail_item_out">
+                                <span class = "ail_item-b">
+                                    <span class = "ail_item_count"><span>more than</span>40</span>
+                                    <span class="ail_item_title">completed projects</span>
+                                </span>
+                            </span>
+                            <span class="ail_item_inside">
+                                <span class="ail_scroll">scroll down</span>
+                            </span>
+                        </a>
                     </li>
                 </ul>
-                    <h1 class = "mp_logo">
-                        <span class = "mp_logo_star"></span>
-                        Up<span class = "mpm mp_2">2</span>frets
-                    </h1>
-                    <p>Musician, <span class = "mpm">web-developer</span> and a little designer :)</p>
-                </div>
+                <!-- <h2>Worked with</h2>
+                <ul class = "about_info_companies grid4 cf">
+                    <li class = "item-1">
+                        <a href="http://">
+                            <img src="img/client1.png" alt="Danta Web">
+                        </a>
+                    </li>
+                    <li class = "item-2">
+                        <a href="http://">
+                            <img src="img/client2.png" alt="GoFree">
+                        </a>
+                    </li>
+                    <li class = "item-3">
+                        <a href="http://">
+                            <img src="img/client3.png" alt="Lead9">
+                        </a>
+                    </li>
+                    <li class = "item-4">
+                        <a href="http://">
+                            <img src="img/client4.png" alt="Watsons">
+                        </a>
+                    </li>
+                </ul> -->
             </div>
+        </div>
+    </section>
+
+    <section class = "mp mp-principles" id = "how-i-work">
+        <section class = "principles-b">
+            <h2>How I Work</h2>
+            <article>
+                <p>Modern web changes in a blink of an eye so I comply to the 3 principles in development</p>
+            </article>
+            <ul class="principles_list grid3 cf">
+                <li class="pl_item item-1">
+                    <figure>
+                        <div class = "pl_item_image">
+                            <img src="img/mobile-first.png" alt="">
+                        </div>
+                        <figcaption><p>Mobile <em>first</em></p><p>Adaptive/responsive layouts</p></figcaption>
+                    </figure>
+                </li>
+                <li class="pl_item item-2">
+                    <figure>
+                        <div class = "pl_item_image pl_browsers">
+                            <ul>
+                                <li><span class = "icon-firefox"></span></li>
+                                <li class="active"><span class = "icon-chrome"></span></li>
+                                <li><span class = "icon-opera"></span></li>
+                                <li><span class = "icon-ie"></span></li>
+                            </ul>
+                        </div>
+                        <figcaption><p>Crossbrowser</p><p>At least <em>2 latest</em> versions</p></figcaption>
+                    </figure>
+                </li>
+                <li class="pl_item item-3">
+                    <figure>
+                        <div class="pl_item_image">
+                            <img src="img/pixel-perfect.png" alt="">
+                        </div>
+                        <figcaption><p>Pixel <em>perfect</em></p><p>I'm just saying :)</p></figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <a href="download/cv.pdf" class="button_white principles_cv">Download my CV</a>
         </section>
-        <svg id="curveUpColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
-            </svg>
-        <section class = "mp_container mp2 cf">
-            <div class = "mp_left">
-                <div class = "mp_vertical_holder">
-                    <nav class = "mp_menu" ng-controller = "PhoneListCtrl">
-                        <ul>
-                            <li ng-repeat = "item in items">
-                                <a href="{{item.linkUrl}}">
-                                    <i class = "{{item.iconClass}}"></i>
-                                    <span class = "title">{{item.title}}</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+    </section>
+
+    <section class="mp mp-projects" id="portfolio">
+        <section class = "projects-b">
+            <h2>My latest projects</h2>
+            <ul class="projects_list cf">
+                <li>
+                    <a href="">
+                        <span class = "tile_outer">
+                            <img src="img/projects/1.jpg" alt="">
+                        </span>
+                        <span class="tile_inner">
+                            <span class = "tile_inner_name">
+                                <img src="img/projects/p1.png" alt="">
+                            </span>
+                            <span>Outdoor Sports Ukraine</span>
+                            <span class = "tile_inner_add">(sporting goods promo)</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class = "tile_outer">
+                            <img src="img/projects/2.jpg" alt="">
+                        </span>
+                        <span class="tile_inner">
+                            <span class = "tile_inner_name">
+                                <img src="img/projects/p2.png" alt="">
+                            </span>
+                            <span>Doctor Apple</span>
+                            <span class = "tile_inner_add">(service)</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class = "tile_outer">
+                            <img src="img/projects/3.jpg" alt="">
+                        </span>
+                        <span class="tile_inner">
+                            <span class = "tile_inner_name">
+                                <img src="img/projects/p3.png" alt="">
+                            </span>
+                            <span>GoFree Mobile</span>
+                            <span class = "tile_inner_add">(sporting goods e-commerce)</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class = "tile_outer">
+                            <img src="img/projects/4.jpg" alt="">
+                        </span>
+                        <span class="tile_inner">
+                            <span class = "tile_inner_name">
+                                <img src="img/projects/p4.png" alt="">
+                            </span>
+                            <span>Zvezda</span>
+                            <span class = "tile_inner_add">(informational web-portal)</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class = "tile_outer">
+                            <img src="img/projects/5.jpg" alt="">
+                        </span>
+                        <span class="tile_inner">
+                            <span class = "tile_inner_name">
+                                <img src="img/projects/p5.png" alt="">
+                            </span>
+                            <span>Climat King</span>
+                            <span class = "tile_inner_add">(online shop)</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class = "tile_outer">
+                            <img src="img/projects/6.jpg" alt="">
+                        </span>
+                        <span class="tile_inner">
+                            <span class = "tile_inner_name">
+                                <img src="img/projects/p6.png" alt="">
+                            </span>
+                            <span>Zozulya Mobile</span>
+                            <span class = "tile_inner_add">(Ukrainian image designer promo)</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class = "tile_outer">
+                            <img src="img/projects/7.jpg" alt="">
+                        </span>
+                        <span class="tile_inner">
+                            <span class = "tile_inner_name">
+                                <img src="img/projects/p7.png" alt="">
+                            </span>
+                            <span>Master Mramor</span>
+                            <span class = "tile_inner_add">(stone treatment center)</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class = "tile_outer">
+                            <img src="img/projects/8.jpg" alt="">
+                        </span>
+                        <span class="tile_inner">
+                            <span class = "tile_inner_name">
+                                <img src="img/projects/p8.png" alt="">
+                            </span>
+                            <span>Outdoor Stock</span>
+                            <span class = "tile_inner_add">(sporting goods e-commerce)</span>
+                        </span>
+                    </a>
+                </li>
+                <li class = "tile_download">
+                    <a href="download/cv.pdf">
+                        Download my CV
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <div class="mp-projects_scroll">
+            <a href="#home" class=""></a>
+        </div>
+    </section>
+
+    <footer class="mp mp-contacts" id="contacts">
+        <div class = "contacts-b cf">
+            <div class = "contacts_left">
+                <h2 class="contacts_logo">Bogdan Malizhev <span>web-developer</span></h2>
             </div>
-            <div class = "mp_right">
-                <div class = "mp_vertical_holder">
-                <ul class = "mp_chLang">
-                    <li>
-                        <a href="">Рус</a>
+            <div class="contacts_right">
+                <ul class="contacts_social">
+                    <li><a href="https://www.facebook.com/bogdan.malizhev" class = "icon-facebook" target = "_blank"></a></li>
+                    <li><a href="https://www.vk.com/bogdan.malizhev" class = "icon-vk" target = "_blank"></a></li>
+                    <li><a href="http://www.linkedin.com/profile/view?id=218819188" class = "icon-linkedin" target = "_blank"></a></li>
+                    <li><a href="https://www.facebook.com/bogdan.malizhev" class = "icon-github" target = "_blank"></a></li>
+                </ul>
+                <ul class="contacts_info">
+                    <li><strong>Email:</strong> 
+                        <a href = "mailto:dexter.crossfire@gmail.com">dexter.crossfire@gmail.com</a>
                     </li>
-                    <li>
-                        <a href="">Укр</a>
-                    </li>
-                    <li class = "mpcl_act">
-                        <a href="">Eng</a>
+                    <li><strong>Skype:</strong> 
+                        <a href="skype:dexter_crossfire">dexter_crossfire</a>
                     </li>
                 </ul>
-                    <h1 class = "mp_logo">
-                        <span class = "mp_logo_star"></span>
-                        Up<span class = "mpm mp_2">2</span>frets
-                    </h1>
-                    <p>Musician, <span class = "mpm">web-developer</span> and a little designer :)</p>
-                </div>
+                
             </div>
-        </section>
+        </div>
+    </footer>
