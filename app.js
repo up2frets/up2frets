@@ -18,7 +18,7 @@ app.engine('ejs', engine);
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
-app.use(require('less-middleware')({ src: __dirname + '/public' }));
+
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
