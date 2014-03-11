@@ -1,0 +1,18 @@
+header,
+.f_socials_item,
+.f_socials_item:hover {
+	background: #f0f0f0;
+}
+.si_img {
+	visibility: hidden;
+}
+
+.h_menu ul li.h_menu_login a:before {
+    content: "★";
+    color: #fff;
+    background: none;
+    top: 2px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+}

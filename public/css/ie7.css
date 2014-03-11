@@ -1,0 +1,8 @@
+.f_socials li,
+.f_socials_item,
+.h_menu ul li,
+.services_item,
+.si_holder {
+    zoom: 1;
+    *display: inline;
+}
