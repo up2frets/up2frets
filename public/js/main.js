@@ -1,11 +1,18 @@
 $(function() {
 
-	var $mpHome = $('.mp-home'),
+	var $body = $('body'),
+		$mpHome = $('.mp-home'),
 		$header = $('header'),
 		$headerLink = $header.find('.header_nav a'),
 		$section = $('.mp'),
 		$footer = $('footer'),
-		$btnScrollBottom = $('.mp-projects_scroll a')
+		$btnScrollBottom = $('.mp-projects_scroll a'),
+		$browserIcons = $('.pl_browsers li'),
+		$projectsRow = $('.projects_list > li'),
+		scrollTimer,
+		browsersTimer;
+
+	$body.removeClass('loading')
 
 	$('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
@@ -22,19 +29,17 @@ $(function() {
 	    });
 	});
 
-	var body = document.body,
-    timer;
 
-	window.addEventListener('scroll', function() {
-	  clearTimeout(timer);
-	  if(!body.classList.contains('disable-hover')) {
-	    body.classList.add('disable-hover')
+	$(window).on('scroll', function() {
+	  clearTimeout(scrollTimer);
+	  if(!$body.hasClass('disable-hover')) {
+	    $body.addClass('disable-hover')
 	  }
 	  
-	  timer = setTimeout(function(){
-	    body.classList.remove('disable-hover')
+	  scrollTimer = setTimeout(function(){
+	    $body.removeClass('disable-hover')
 	  },200);
-	}, false);
+	});
 
 	$(window).on('load scroll resize', function(){
 		scrollSpy();
@@ -58,10 +63,23 @@ $(function() {
 		} else {
 			$headerLink.filter(patternHref).addClass('active');
 			$section.filter(patternId).addClass('active');
-
-			console.log(patternId);
 		}
 
+	}
+
+	var index = 0;
+	browsersTimer = setTimeout(function changeIcon(){
+		$browserIcons.removeClass('active');
+		$browserIcons.eq(index).addClass('active');
+
+		index < $browserIcons.length - 1 ? index++ : index = 0;
+		
+		browsersTimer = setTimeout(changeIcon, 2000);
+		
+	}, 1000);
+
+	for (var i = 0, len = $projectsRow.length; i < len; i += 3) {
+		$projectsRow.slice(i, i + 3).wrapAll('<div class = "cf">');
 	}
 
 })
