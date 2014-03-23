@@ -82,4 +82,8 @@ $(function() {
 		$projectsRow.slice(i, i + 3).wrapAll('<div class = "cf">');
 	}
 
-})
+	$(window).on('load resize', function() {
+		$(window).width() < 700 ? $body.addClass('mobile') : $body.removeClass('mobile');
+	});
+
+});
