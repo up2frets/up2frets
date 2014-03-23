@@ -1442,6 +1442,9 @@ li.tile_download a:hover:before {
         border: 2px solid #E6E6E6;
         border-radius: 100px;
     }
+    .mp-projects_scroll a {
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 499px) {
