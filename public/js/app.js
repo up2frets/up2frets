@@ -17,7 +17,6 @@ $(function() {
 
 	// Detecting scrolling and changing links
 	function scrollSpy(){
-		console.log('test in scroll');
 		var currentElement = $('.mp:in-viewport').attr('id'),
 			patternHref = '[href $= "{currentElement}"]'.replace('{currentElement}', currentElement),
 			patternId = '[id $= "{currentElement}"]'.replace('{currentElement}', currentElement),
@@ -42,7 +41,6 @@ $(function() {
 
 	// Disable hover on scroll (to increase FPS )
 	function disableHover(){
-		console.log('test in hover');
 		clearTimeout(scrollTimer);
 		if(!$body.hasClass('disable-hover')) {
 		   	$body.addClass('disable-hover')
